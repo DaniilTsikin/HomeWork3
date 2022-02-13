@@ -2,9 +2,9 @@
 bool Truth(bool arg1, bool arg2)
 {
     bool sum = !(arg1 ^ arg2);
-    Console.WriteLine(sum);
-    bool prct = !arg1 & !arg2;
-    Console.WriteLine(prct);
+    Console.WriteLine($"Результат сложения: {sum}");
+    bool prct = !arg1 && !arg2;
+    Console.WriteLine($"Результат произведения: {prct}");
     bool result = false;
     if(sum == prct)
     {
@@ -12,7 +12,16 @@ bool Truth(bool arg1, bool arg2)
     }
     return result;
 }
-bool X = true;
-bool Y = false;
+bool X = false;
+bool Y = true;
 bool res = Truth(X, Y);
+Console.WriteLine(res);
+X = true;
+Y = false;
+Console.WriteLine(res);
+X = true;
+Y = true;
+Console.WriteLine(res);
+X = false;
+Y = false;
 Console.WriteLine(res);
